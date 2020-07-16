@@ -68,10 +68,10 @@ docker cp meter:/var/log/supervisor/[LogFileNameHere]     //replace with the log
 
 After confirming the node is running properly through the log, you could then connect the desktop wallet to your own full node.
 
-You could compare the with height with the official [Warring Stakes Testnet Explorer](http://scan.warringstakes.meter.io)
+You could compare the with height with the [Explorer](http://scan.meter.io) maintained by the team
 
 4. Point [Meter desktop wallet](https://meter.io/developers) to your own full node
-In the settings of the wallet, under node, you could and connect add your own full node by adding http://IPaddrOfYourNode:8669 .  The icon in the left of the address bar should turn green if everything is running properly.  You could use the explorer inside the wallet to look at the status of the block productions. You should also create an account.  Please make sure you keep the mnemonics in a secure location, you will need them to retrieve your account when we switching between the test nets and it should also work on the future main net.  Please contact a team member to obtain MTRG and MTR test tokens.
+In the settings of the wallet, under node, you could and connect add your own full node by adding http://IPaddrOfYourNode:8669 .  The icon in the left of the address bar should turn green if everything is running properly.  You could use the explorer inside the wallet to look at the status of the block productions. You should also create an account.  Please make sure you keep the mnemonics in a secure location, you will need them to retrieve your account when we switching between mainnet and Testnet.  Please contact a team member to obtain MTRG and MTR test tokens.
 
 ![Adding Your Node in Wallet Settings](./addnode.png)
 ![Connecting to Your Node](./connectnode.png)
