@@ -35,7 +35,7 @@ After this, please logout and log back in to refresh the user group setting and 
 
 1. Download the latest [desktop wallet](https://www.meter.io/wallets/)
 
-2. Run Meter full node in container
+2. Run Meter full node in container.  In the following example, we assume all the PoS block database will be put into the directory /home/ubuntu/meter-main created by the user.  Please adjust accordingly if your directory structure is different.  In the future, you will not have to resync the node as long as you retain this directory.
 
 ```
 docker run --network host --name meter -e NETWORK="main" -v /home/ubuntu/meter-main:/pos -d meterio/mainnet:latest
@@ -75,3 +75,19 @@ In the settings of the wallet, under node, you could and connect add your own fu
 
 ![Adding Your Node in Wallet Settings](./addnode.png)
 ![Connecting to Your Node](./connectnode.png)
+
+# Upgrade a full node
+
+1. Stop and remove the current CONTAINER
+```
+docker container rm -f meter
+```
+1. Pull the latest container image
+```
+docker pull meterio/mainnet:latest
+```
+3. Start the new image
+
+```
+docker run --network host --name meter -e NETWORK="main" -v /home/ubuntu/meter-main:/pos -d meterio/mainnet:latest
+```
